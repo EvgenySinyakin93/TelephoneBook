@@ -1,16 +1,27 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class PhoneBook {
+    private Map<String, String> phoneBook = new TreeMap<>();
 
-    public static int add(String name, String phone) {
-        Map<String, String> phoneBook = new TreeMap<>();
-
-        if(!phoneBook.containsKey(name) && !phoneBook.containsValue(phone)){
+    public int add(String name, String phone) {
+        if (!phoneBook.containsKey(name) && !phoneBook.containsValue(phone)) {
             phoneBook.putIfAbsent(name, phone);
         }
         return phoneBook.size();
     }
+
+    public String findByNumber(String phone) {
+//        return phoneBook.entrySet().stream()
+//                .filter(v -> v.getValue().equals(phone)).
+//                map(Map.Entry::getKey).
+//                findFirst().orElse(null);
+        return phone;
+    }
+
+
 }
