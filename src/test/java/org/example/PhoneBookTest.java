@@ -14,4 +14,13 @@ class PhoneBookTest {
         int actual = phoneBook.add("Yura", "79564372901");
         Assertions.assertEquals(3,actual);
     }
+
+    @Test
+    void addPassed() {
+        phoneBook.add("Oleg", "79105304792");
+        phoneBook.add("Elena", "79178308923");
+        phoneBook.add("Yura", "79489573202");
+        int actual = phoneBook.add("Yura", "79564372901");
+        Assertions.assertEquals(1,actual);
+    }
 }
