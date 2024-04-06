@@ -22,5 +22,13 @@ public class PhoneBook {
                 findFirst().orElse(null);
     }
 
+    public String findByName(String name) {
+        return phoneBook.get(name);
+    }
+
+    public List<String> printAllNames() {
+        return new ArrayList<>(phoneBook.keySet());
+    }
+
 
 }
