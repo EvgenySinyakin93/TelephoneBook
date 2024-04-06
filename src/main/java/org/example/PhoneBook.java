@@ -16,11 +16,10 @@ public class PhoneBook {
     }
 
     public String findByNumber(String phone) {
-//        return phoneBook.entrySet().stream()
-//                .filter(v -> v.getValue().equals(phone)).
-//                map(Map.Entry::getKey).
-//                findFirst().orElse(null);
-        return phone;
+        return phoneBook.entrySet().stream()
+                .filter(v -> v.getValue().equals(phone)).
+                map(Map.Entry::getKey).
+                findFirst().orElse(null);
     }
 
 
